@@ -538,8 +538,6 @@ PRODUCT_PACKAGES := \
     AlarmProvider \
     Bluetooth \
     BluetoothExt \
-    BTTestApp \
-    HiddTestApp \
     Calculator \
     Calendar \
     Camera \
@@ -549,13 +547,10 @@ PRODUCT_PACKAGES := \
     Email \
     Gallery2 \
     LatinIME \
-    Launcher2 \
-    Mms \
-    Music \
+    Launcher3 \
+    messaging \
     Phone \
     Provision \
-    Protips \
-    QuickSearchBox \
     Settings \
     Sync \
     SystemUI \
@@ -564,7 +559,6 @@ PRODUCT_PACKAGES := \
     SyncProvider \
     IM \
     VoiceDialer \
-    FM2 \
     FMRadio \
     FMRecord \
     VideoEditor
@@ -743,9 +737,6 @@ SKIP_BOOT_JARS_CHECK := true
 # device-vendor.mk first to make sure QC specific files gets installed.
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-PRODUCT_BRAND := qcom
-PRODUCT_AAPT_CONFIG += hdpi mdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
