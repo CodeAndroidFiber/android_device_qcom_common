@@ -394,7 +394,7 @@ $(call inherit-product-if-exists, external/llvm/llvm-select.mk)
 LOC_API := libloc_api-rpc-qc
 
 #MEDIA_PROFILES
-MEDIA_PROFILES := media_profiles.xml
+#MEDIA_PROFILES := media_profiles.xml
 
 #MM_AUDIO
 MM_AUDIO := libOmxAacDec
@@ -615,7 +615,7 @@ PRODUCT_PACKAGES += $(LIBQDUTILS)
 PRODUCT_PACKAGES += $(LIBQDMETADATA)
 PRODUCT_PACKAGES += $(LIBPOWER)
 PRODUCT_PACKAGES += $(LOC_API)
-PRODUCT_PACKAGES += $(MEDIA_PROFILES)
+#PRODUCT_PACKAGES += $(MEDIA_PROFILES)
 PRODUCT_PACKAGES += $(MM_AUDIO)
 PRODUCT_PACKAGES += $(MM_CORE)
 PRODUCT_PACKAGES += $(MM_VIDEO)
@@ -703,9 +703,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    device/qcom/common/media/media_profiles.xml:system/etc/media_profiles.xml \
-    device/qcom/common/media/media_codecs.xml:system/etc/media_codecs.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml
+#    device/qcom/common/media/media_profiles.xml:system/etc/media_profiles.xml \
+#    device/qcom/common/media/media_codecs.xml:system/etc/media_codecs.xml
 
 ifeq ($(TARGET_DEVICE_NAME_LOW_END),true)
 PRODUCT_COPY_FILES += \
